@@ -34,3 +34,39 @@ h1 {
     color: red;
   }
 }
+
+// Custom Styles
+
+section#tabComponent1 {
+  width: 70%;
+  margin: 0 15%;
+  max-width: 1400px;
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    .tabs-label {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .tabs-radio {
+      display: none;
+      &:checked+.tabs-label {
+        font-weight: bold;
+        color: #009578;
+        border-bottom: 2px solid #009578;
+      }
+      &:checked+.tabs-label+.tabs-content {
+        display: block;
+      }
+    }
+    .tabs-content {
+      order: 1;
+      width: 100%;
+      border-bottom: 3px solid #ddd;
+      line-height: 1.5;
+      font-size: 0.9em;
+      display: none;
+    }
+  }
+}
