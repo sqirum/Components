@@ -31,11 +31,13 @@ h1 a {
   color: red;
 }
 
-section#tabComponent1 {
+section {
+  padding: 50px 0;
   width: 70%;
   margin: 0 15%;
   max-width: 1400px;
 }
+
 section#tabComponent1 .tabs {
   display: flex;
   flex-wrap: wrap;
@@ -63,4 +65,52 @@ section#tabComponent1 .tabs .tabs-content {
   line-height: 1.5;
   font-size: 0.9em;
   display: none;
+}
+
+section#tabComponent2 {
+  padding: 20px;
+  border: 1px solid #f1f1f1;
+}
+section#tabComponent2 .mytabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+section#tabComponent2 .mytabs input[type=radio] {
+  display: none;
+}
+section#tabComponent2 .mytabs input[type=radio]:checked + label + .tab {
+  display: block;
+}
+section#tabComponent2 .mytabs label {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+section#tabComponent2 .mytabs label.free {
+  background: #fff;
+}
+section#tabComponent2 .mytabs label.silver {
+  background: #C0C0C0;
+}
+section#tabComponent2 .mytabs label.gold {
+  background: #d4af37;
+}
+section#tabComponent2 .mytabs .tab {
+  width: 100%;
+  padding: 20px;
+  background: #009578;
+  order: 1;
+  display: none;
+}
+section#tabComponent2 .mytabs .tab.free {
+  background: #fff;
+}
+section#tabComponent2 .mytabs .tab.silver {
+  background: #C0C0C0;
+}
+section#tabComponent2 .mytabs .tab.gold {
+  background: #d4af37;
+}
+section#tabComponent2 .mytabs .tab h2 {
+  font-size: 1.5em;
 }

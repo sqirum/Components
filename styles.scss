@@ -36,11 +36,14 @@ h1 {
 }
 
 // Custom Styles
-
-section#tabComponent1 {
+section {
+  padding: 50px 0;
   width: 70%;
   margin: 0 15%;
   max-width: 1400px;
+}
+section#tabComponent1 {
+  
   .tabs {
     display: flex;
     flex-wrap: wrap;
@@ -67,6 +70,58 @@ section#tabComponent1 {
       line-height: 1.5;
       font-size: 0.9em;
       display: none;
+    }
+  }
+}
+
+section#tabComponent2 {
+  padding: 20px;
+  border: 1px solid #f1f1f1;
+  .mytabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    input[type='radio'] {
+      display: none;
+      &:checked {
+        & + label {
+          & + .tab {
+            display: block;
+          }
+        }
+      }
+    }
+    label {
+      padding: 10px 20px;
+      cursor: pointer;
+      &.free {
+        background: #fff;
+      }
+      &.silver {
+        background: #C0C0C0;
+      }
+      &.gold {
+        background: #d4af37;
+      }
+    }
+    .tab {
+      width: 100%;
+      padding: 20px;
+      background: #009578;
+      order: 1;
+      display: none;
+      &.free {
+        background: #fff;
+      }
+      &.silver {
+        background: #C0C0C0;
+      }
+      &.gold {
+        background: #d4af37;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
     }
   }
 }
