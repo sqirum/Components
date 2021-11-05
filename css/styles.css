@@ -114,3 +114,51 @@ section#tabComponent2 .mytabs .tab.gold {
 section#tabComponent2 .mytabs .tab h2 {
   font-size: 1.5em;
 }
+
+section#progressBar1 {
+  background-color: #2e2e2e;
+}
+section#progressBar1 .container1 {
+  margin: 0 auto;
+  width: 300px;
+  height: 23px;
+  background-color: #009578;
+  border-radius: 30px;
+  position: relative;
+}
+section#progressBar1 .container1:hover {
+  cursor: pointer;
+}
+section#progressBar1 .container1:hover .bar1 {
+  animation-play-state: running;
+}
+section#progressBar1 .container1 .bar1 {
+  width: 80%;
+  height: 19px;
+  background-color: #d4af37;
+  border-radius: 30px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  animation: animationBar1 3s ease 0s 2 normal forwards paused;
+  /*
+  ### ANIMATION DEFAULTS ###
+
+  animation-name: none;
+  animation-duration: 0;
+  animation-timing-function: ease;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  */
+}
+@keyframes animationBar1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}

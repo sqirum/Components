@@ -35,7 +35,7 @@ h1 {
   }
 }
 
-// Custom Styles
+// Tabs
 section {
   padding: 50px 0;
   width: 70%;
@@ -121,6 +121,56 @@ section#tabComponent2 {
       }
       h2 {
         font-size: 1.5em;
+      }
+    }
+  }
+}
+
+// Progress Bars
+section#progressBar1 {
+  background-color: #2e2e2e;
+  .container1 {
+    margin: 0 auto;
+    width: 300px;
+    height: 23px;
+    background-color: #009578;
+    border-radius: 30px;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+      .bar1 {
+        animation-play-state: running;
+      }
+    }
+    .bar1 {
+      width: 80%;
+      height: 19px;
+      background-color: #d4af37;
+      border-radius: 30px;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      animation: animationBar1 3s ease 0s 2 normal forwards paused;
+      /*
+      ### ANIMATION DEFAULTS ###
+
+      animation-name: none;
+      animation-duration: 0;
+      animation-timing-function: ease;
+      animation-delay: 0;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: none;
+      animation-play-state: running;
+      */
+      
+    }
+    @keyframes animationBar1 {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 80%;
       }
     }
   }
