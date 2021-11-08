@@ -1,3 +1,4 @@
+
 // import google font
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -5,6 +6,7 @@
 * {
   color: inherit;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -171,6 +173,121 @@ section#progressBar1 {
       }
       100% {
         width: 80%;
+      }
+    }
+  }
+}
+
+// Breadcrumbs
+
+$blue-gray: #34495e;
+$blue-gray-darken : #2c3e50;
+$blue: #3498db;
+$blue-darken: #2980b9;
+$green: #1abc9c;
+$green-darken: #16a085;
+
+section#bread1 {
+  background: $blue-gray-darken;
+  text-align: center;
+  #breadcrumb1{
+    list-style:none;
+    display: inline-block;
+    
+    .icon{
+      font-size: 14px;
+    }
+    
+    li{
+      display: inline-block;
+      span {
+        display: inline-block;
+        margin-right: 8px;
+      }
+      a{
+        color:#FFF;
+        display:block;
+        background: $blue;
+        text-decoration: none;
+        position:relative;
+        height: 40px;
+        line-height:40px;
+        padding: 0 10px 0 5px;
+        text-align: center;
+        margin-right: 20px;
+      }
+      &:nth-child(even){
+        a{
+          background-color: $blue-darken;
+          
+          &:before{
+            border-color:$blue-darken;
+            border-left-color:transparent;
+           }
+          &:after{
+            border-left-color:$blue-darken;
+          }
+        }
+      }
+      &:first-child{
+        a{
+          padding-left:15px;
+          &:before{
+            border:none;
+           }
+        }
+      }
+      &:last-child{
+        a{
+          padding-right:15px;
+          &:after{
+            border:none;
+           }
+        }
+      }
+      
+      a{   
+        &:before,
+        &:after{
+          content: "";
+          position:absolute;
+          top: 0;
+          border:0 solid $blue;
+          border-width:20px 10px;
+          width: 0;
+          height: 0;
+        }
+        &:before{
+          left:-20px;
+          border-left-color:transparent;
+        }
+        &:after{
+          left:100%;
+          border-color:transparent;
+          border-left-color:$blue;
+        }
+        &:hover{
+          background-color: $green;
+          
+          &:before{
+            border-color:$green;
+            border-left-color:transparent;
+           }
+          &:after{
+            border-left-color:$green;
+          }
+        }
+        &:active{
+          background-color: $green-darken;
+          
+          &:before{
+            border-color:$green-darken;
+            border-left-color:transparent;
+           }
+          &:after{
+            border-left-color:$green-darken;
+          }
+        }
       }
     }
   }

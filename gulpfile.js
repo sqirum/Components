@@ -8,7 +8,7 @@ function buildStyles() {
 }
 
 function watchTask() {
-    watch(['styles.scss'], buildStyles)
+    watch(['styles.scss','_breadcrum.scss'], buildStyles)
 }
 
 exports.default = series(buildStyles, watchTask);
