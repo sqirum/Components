@@ -254,3 +254,34 @@ section#bread1 #breadcrumb1 li a:active:before {
 section#bread1 #breadcrumb1 li a:active:after {
   border-left-color: #16a085;
 }
+
+section#bread2 {
+  background: chocolate;
+  text-align: center;
+}
+section#bread2 ul#breadcrumb2 li {
+  display: inline-block;
+  background: coral;
+}
+section#bread2 ul#breadcrumb2 li a {
+  /*
+  &::before {
+    border-left: 10px solid white;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    width: 0;
+    height: 0;
+    content: '';
+    display: inline-block;
+  }
+  */
+}
+section#bread2 ul#breadcrumb2 li a::after {
+  border-left: 40px solid transparent;
+  border-top: 40px solid white;
+  border-bottom: 40px solid white;
+  width: 0;
+  height: 0;
+  content: "";
+  display: inline-block;
+}
